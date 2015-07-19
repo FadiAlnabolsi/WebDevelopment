@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Appending Content</title>
+	<style>
+		article{
+			width: 600px;
+			margin: auto;
+		}
+
+		blockquote.co{
+			float:right;
+			background: #e3e3e3;
+			font-size: 2em;
+			width: 35%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+
+<article>
+	<h1>My Awesome Post</h1>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse.
+	</p>
+	<p>
+		<span class="co">Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse. consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse. consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse. consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse. consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse. consectetur adipisicing elit. Impedit aperiam est beatae alias, <span class="co">Hello from JavaScript</span>aliquam natus dolorum asperiores minus esse. consectetur adipisicing elit. Impedit aperiam est beatae alias, aliquam natus dolorum asperiores minus esse.
+	</p>
+</article>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>	
+<script>
+	(function(){
+		/*
+		--appending content--
+		$('h1').appendTo('article');
+		$('<h2></h2>', {
+			text: 'Hello from JavaScript',
+			class: 'myClass'
+		}).insertBefore('p:nth-child(3)'); 
+		*/
+		//$('h1').appendTo('article');
+		//$('p').after($('h1'));          //adds h1 to after all p elements
+		//$('p').eq(0).after($('h1'));    //adds h1 to the first p element
+		/* 
+		$('p').eq(0).after(function() {	  
+			return $(this).prev();
+		});
+		*/
+		//$(this).closest('p').prepend('hi there'); //adds hi there to the last p element
+		/*
+		functions to remember
+		Append, preprend, insertAfter, insertBefore, appentTo, prependTo, before, after
+		*/
+		var co = $('span.co').each(function() {
+			var $this = $(this);
+
+			$('<blockquote></blockquote>', {
+				class: 'co',
+				text: $this.text()
+			}).prependTo($this.closest('p'));
+		});
+
+
+	})();
+
+</script>
+
+
+</body>
+</html>
