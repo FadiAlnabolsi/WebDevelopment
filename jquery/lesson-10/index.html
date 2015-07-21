@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Effect Speeds</title>
+</head>
+<body>
+
+<h1>Reveal</h1>
+<div class="content">
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officiis repellat expedita sapiente debitis saepe deserunt quis earum perferendis dicta dolorem delectus temporibus quos totam eveniet, ratione cupiditate! Distinctio, voluptates.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque ratione qui commodi ducimus incidunt perspiciatis minus dolor repellendus placeat error sit, ab nam veniam assumenda, ipsam sequi alias omnis!
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur omnis alias corporis saepe dolor tempore ratione dolorem voluptates optio esse, nesciunt dolorum neque, voluptate tenetur provident. Libero doloremque aliquid ipsam!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima earum dolores reprehenderit vel ipsam rerum deleniti explicabo, eius placeat quam nulla perspiciatis exercitationem possimus voluptatem eos nisi. Nesciunt, quibusdam.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sit, ut facere molestias optio suscipit amet aliquam, minus, tempora libero repudiandae quidem laborum qui. Dolore maxime, sed vero totam quis.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda neque modi culpa, aperiam facilis at suscipit reprehenderit similique ab vitae aut eius maxime nulla omnis sint deserunt alias voluptates distinctio.
+	</p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>	
+<script>
+	$('div.content').hide();
+
+	//$.fx.speeds._default = 2000;
+	$.fx.speeds.tortoise = 5000;
+
+	console.log($.fx.speeds)
+
+	$('h1').on('click', function()
+	{
+		$(this).next().slideDown('tortoise');
+	})
+</script>
+
+</body>
+</html>
