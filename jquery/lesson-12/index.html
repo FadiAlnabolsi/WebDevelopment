@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Animate</title>
+	<style>
+	.box{
+		width:400px;
+		background: red;
+		padding: 2em;
+		position: relative;
+	}
+
+	</style>
+</head>
+<body>
+
+<div class="box">
+	<h2>Some Content Here</h2>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa magni amet ex, quam aut dignissimos alias praesentium exercitationem debitis fugit voluptatibus, placeat fuga sunt eius nulla harum aspernatur esse! Beatae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ratione porro mollitia nemo rerum quos dolorem dolores magnam nobis ipsum, autem illo est in tempore animi repellendus doloribus dolorum quod!
+	</p>
+</div>
+
+<p><button>increase</button></p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>	
+<script>
+	(function() {
+		var box = $('div.box');
+			//fontSize = parseInt( box.css('font-size'), 10);
+		$('button').on('click', function() {
+			//$('.box').css('font-size', '25px'); static
+			//$('div.box').css('font-size', '25px'); moved above
+			//box.css('font-size', '25px');
+			//box.css('font-size', fontSize+=5);
+			//box.css('font-size', '+=5');
+			/*  box.css({
+				'font-size':'+=5',
+				'color': 'white'
+			     });
+			*/
+
+			/*  box.animate({
+				'font-size':'+=5',
+				'width':'+=300'
+				});
+			*/
+
+			/* box.animate({
+				'font-size':'+=5',
+				'width':'+=300'
+			}, 3000);
+			*/ 
+
+			/*
+			box.animate({
+				'font-size':'+=5',
+				'width':'+=300'
+			}, 500, 'swing', function(){
+				console.log("Completed");
+			});
+			*/
+
+			//11:15
+			box.animate({
+				'font-size':'+=5'
+			}, {
+				duration: 500,
+				complete: function()
+					console.log('completed');
+			},
+			step: function() {
+				console.log('step here');
+			}
+			);
+		});
+	})();
+
+
+</script>
+
+</body>
+</html>
