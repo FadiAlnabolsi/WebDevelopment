@@ -1,0 +1,103 @@
+/*
+****=Header
+*/
+.header{
+	overflow: hidden;
+	padding-top: 30px;
+}
+
+.border{
+	border-top: 1px solid #d1d1d1;
+}
+
+.header ul{
+	float: right;
+	padding-top: 13px;
+	padding-right: 25px;
+	margin-left: 55px;
+}
+
+
+.header h1{
+	length: 20px;
+}
+
+.highlight{
+	width: 245px;
+	background: white;
+	position: absolute;
+	bottom:310px;
+	left: 380px;
+
+}
+
+.highlight p{
+	position: relative;
+	bottom: 15px;
+}
+
+
+/*
+****=Collection
+*/
+
+.collection ul li{
+	float:left;
+	display: inline;
+	width: 235px;
+	margin-bottom: 75px;
+
+}
+
+
+.collection h2 {
+	font-size: 17px;
+	margin-bottom: 5px;
+}
+
+#first{
+	position: relative;;
+	float:left;
+	top: -2px;
+	right:10px;
+	width: 250px;
+
+}
+/*
+****=Misc
+*/
+a, h2, h3{
+	color:red;
+}
+.wrap{
+	width: 1080px;
+	margin:0 auto;
+	overflow: hidden;
+}
+
+ul li{
+	display: inline;
+}
+
+.highlight ul{
+	margin: 0 -4px;
+}
+
+.Banner{
+	position: relative;
+	background: url(../img/Banner.jpg) no-repeat;
+	width: 1080px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+
+#display{
+	display:inline-block; 
+}
+
+.fa-arrow-left, .fa-arrow-right{
+	position: relative;
+	left: 1033px;
+}
+

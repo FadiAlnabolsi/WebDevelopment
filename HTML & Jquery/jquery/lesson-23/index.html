@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>AJAX: Load Main</title>
+</head>
+<body>
+<a href="about.html">Learn More About Me</a>
+<br>
+<a href="contacts.html">Contact Me</a>
+
+<div class="wrap"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script>
+
+(function() {
+var wrap = $('div.wrap');
+
+$('a').on('click', function(e) {
+	var href = $(this).attr('href');
+	console.log(href);
+	wrap.load(href + ' .container');
+
+	e.preventDefault();
+	})
+})();
+
+
+</script>
+
+
+</body>
+</html>

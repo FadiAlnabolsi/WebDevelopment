@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>$.grep</title>
+</head>
+<body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script src="https://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"></script>
+
+<script>
+
+(function() {
+
+	// var arr = [1,2,3,4,5,6,7,8,9,10];
+	// arr = $.grep( arr, function(val, index) {
+	// 	//only return numberes greater 5
+	// 	return val > 5;
+	// });
+
+	// console.log(arr);
+
+	var arr = [
+		{
+			first: 'Fadi',
+			last: 'Swift'
+		},
+		{
+			first: 'McFads',
+			last: 'Swift'
+		},
+		{
+			first: 'Fafs',
+			last: 'Swift'
+		},
+		{
+			first: 'John',
+			last: 'Doe'
+		},
+		{
+			first: 'Papa',
+			last: 'Swift'
+		},
+	]
+
+	arr = $.grep(arr, function(obj, index) {
+		return obj.last === 'Swift';
+	})
+
+	console.log(arr);
+})();
+
+</script>
+
+</body>
+</html>

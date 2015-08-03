@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = utf-8>
+	<title>The this Keyword</title>
+</head>
+<body>
+
+<a href="http://tutplus.com">Click Me</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>	
+<script>
+var obj = {
+	doIt: function(e) {
+		console.log(this);
+		e.preventDefault();
+	}
+}
+
+//proxy states exactly what should be treated as 'this'
+$('a').on('click', $.proxy(obj.doIt, obj));
+
+/* $('a').on('click', function(e) {
+ 	//this - anchor that was clicked
+ 	obj.doIt.call(this);
+
+ 	e.preventDefault();
+ });*/
+
+/*function doSomething(e){
+	e.preventDefault();
+	console.log(this);
+}*/
+
+// $('a').on('click', doSomething);
+
+</script>
+
+</body>
+</html>
